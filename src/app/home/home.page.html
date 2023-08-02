@@ -1,0 +1,110 @@
+<ion-header [translucent]="true">
+  <ion-fab horizontal="start" class="pt-3">
+    <ion-fab-button size="largue" >
+      <img src={{rutaDeLaImagenPais}} alt="">
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button (click)="cambiarPaisElegido('../../assets/estados-unidos-de-america.png', 'eeuu')" class="mt-3">
+        <img src="../../assets/estados-unidos-de-america.png" alt="">
+      </ion-fab-button>
+      <ion-fab-button (click)="cambiarPaisElegido('../../assets/portugal.png', 'portugues')">
+      <img src="../../assets/portugal.png" alt="">
+      </ion-fab-button>
+      <ion-fab-button (click)="cambiarPaisElegido('../../assets/españita.png', 'espanol')">
+        <img src="../../assets/españita.png" alt="">
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  
+  <ion-fab id="fabTemas" horizontal="center" class="pt-3">
+    <ion-fab-button size="largue" >
+      <img src={{rutaDeLaImagenTema}} alt="">
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button (click)="cambiarTemaElegido('../../assets/numbers.png', 'numeros')" class="mt-3">
+        <img src="../../assets/numbers.png" alt="">
+      </ion-fab-button>
+      <ion-fab-button (click)="cambiarTemaElegido('../../assets/cromatico.png', 'colores')">
+      <img src="../../assets/cromatico.png" alt="">
+      </ion-fab-button>
+      <ion-fab-button (click)="cambiarTemaElegido('../../assets/zorro.png', 'animales')">
+        <img src="../../assets/zorro.png" alt="">
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon (click)="cerrarSesion()" name="log-out" color="danger"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <!-- /////////////////////////////////////////////////////////ANIMALES//////////////////////////////////////////////////////////////////////////////-->
+
+  <div class="contenedor animales" *ngIf="tema=='animales'">
+    <div class="columnaPrimera">
+      <button class="btn btn-primary opcionesTablaDer" (click)='generarSonido("canguro.m4a")'><img class="imgBotonAnimales" src="../../assets/animales/canguro.png" alt=""></button>
+    </div>
+    <div class="columnaPrimera">
+      <button class="btn btn-primary opcionesTablaIzq" (click)="generarSonido('cerdo.m4a')"><img class="imgBotonAnimales" src="../../assets/animales/cerdo.png" alt=""></button>
+    </div>
+    <div class="columna">
+      <button class="btn btn-primary opcionesTablaDer" (click)="generarSonido('leon.m4a')"><img class="imgBotonAnimales" src="../../assets/animales/leon.png" alt=""></button>
+    </div>
+    <div class="columna">
+      <button class="btn btn-primary opcionesTablaIzq" (click)="generarSonido('pinguino.m4a')"><img class="imgBotonAnimales" src="../../assets/animales/pingui.png" alt=""></button>
+    </div>
+    <div class="columna">
+      <button class="btn btn-primary opcionesTablaDer" (click)="generarSonido('perro.m4a')"><img class="imgBotonAnimales" src="../../assets/animales/perro.png" alt=""></button>
+    </div>
+    <div class="columna">
+      <button class="btn btn-primary opcionesTablaIzq" (click)="generarSonido('elefante.m4a')"><img class="imgBotonAnimales" src="../../assets/animales/elefante.png" alt=""></button>
+    </div>
+  </div>
+
+  <!-- /////////////////////////////////////////////////////////COLORES//////////////////////////////////////////////////////////////////////////////-->
+  
+  <div class="contenedor colores" *ngIf="tema=='colores'">
+    <div class="columnaPrimera">
+      <button class="btn btn-primary opcionesTablaDer" (click)="generarSonido('Amarillo.m4a')"><img class="imgBotonColores" src="../../assets/colores/amarillo.png" alt=""></button>
+    </div>
+    <div class="columnaPrimera">
+      <button class="btn btn-primary opcionesTablaIzq"(click)="generarSonido('rosa.m4a')"><img class="imgBotonColores" src="../../assets/colores/rosa.png" alt=""></button>
+    </div>
+    <div class="columna">
+      <button class="btn btn-primary opcionesTablaDer"(click)="generarSonido('verde.m4a')"><img class="imgBotonColores" src="../../assets/colores/verde.png" alt=""></button>
+    </div>
+    <div class="columna">
+      <button class="btn btn-primary opcionesTablaIzq"(click)="generarSonido('rojo.m4a')"><img class="imgBotonColores" src="../../assets/colores/rojo.png" alt=""></button>
+    </div>
+    <div class="columna">
+      <button class="btn btn-primary opcionesTablaDer"(click)="generarSonido('celeste.m4a')"><img class="imgBotonColores" src="../../assets/colores/celeste.png" alt=""></button>
+    </div>
+    <div class="columna">
+      <button class="btn btn-primary opcionesTablaIzq"(click)="generarSonido('azul.m4a')"><img class="imgBotonColores" src="../../assets/colores/azul.png" alt=""></button>
+    </div>
+  </div>
+
+  <!-- /////////////////////////////////////////////////////////NUMEROS//////////////////////////////////////////////////////////////////////////////-->
+  <div class="contenedor numeros" *ngIf="tema=='numeros'">
+    <div class="columnaPrimera">
+      <button class="btn btn-primary opcionesTablaDer" (click)="generarSonido('uno.m4a')"><img class="imgBotonNumeros" src="../../assets/num/numeroUno.png" alt=""></button>
+    </div>
+    <div class="columnaPrimera">
+      <button class="btn btn-primary opcionesTablaIzq" (click)="generarSonido('dos.m4a')"><img class="imgBotonNumeros" src="../../assets/num/numeroDos.png" alt=""></button>
+    </div>
+    <div class="columna">
+      <button class="btn btn-primary opcionesTablaDer" (click)="generarSonido('tres.m4a')"><img class="imgBotonNumeros" src="../../assets/num/numeroTres.png" alt=""></button>
+    </div>
+    <div class="columna">
+      <button class="btn btn-primary opcionesTablaIzq" (click)="generarSonido('cuatro.m4a')"><img class="imgBotonNumeros" src="../../assets/num/numeroCuatro.png" alt=""></button>
+    </div>
+    <div class="columna">
+      <button class="btn btn-primary opcionesTablaDer" (click)="generarSonido('cinco.m4a')"><img class="imgBotonNumeros" src="../../assets/num/numeroCinco.png" alt=""></button>
+    </div>
+    <div class="columna">
+      <button class="btn btn-primary opcionesTablaIzq" (click)="generarSonido('seis.m4a')"><img class="imgBotonNumeros" src="../../assets/num/numeroSeis.png" alt=""></button>
+    </div>
+  </div>
+
+

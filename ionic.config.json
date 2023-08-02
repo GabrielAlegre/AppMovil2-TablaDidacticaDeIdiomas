@@ -1,0 +1,7 @@
+{
+  "name": "tablaDidacticaParaNiños",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

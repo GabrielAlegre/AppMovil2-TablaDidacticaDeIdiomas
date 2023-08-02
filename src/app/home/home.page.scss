@@ -1,0 +1,151 @@
+ion-loading.custom-loading {
+  --background: #e3edff;
+  --spinner-color: #1c6dff;
+
+  color: #1c6dff;
+}
+
+ion-icon{
+  width: 100px;
+  height: 60px;
+  margin-top: 15px;
+  margin-left: 79%;
+}
+
+.imgBotonColores{
+  width: 77px;
+  height: 77px;
+  filter: drop-shadow(4px 6px 8px black);
+}
+
+.imgBotonAnimales{
+  width: 77px;
+  height: 77px;
+  filter: drop-shadow(4px 6px 12px rgb(137, 133, 225));
+}
+
+.imgBotonNumeros{
+  width: 77px;
+  height: 77px;
+  filter: drop-shadow(4px 6px 3px rgb(62, 236, 39));
+}
+
+
+.contenedorMedio{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  // background-image: url('https://i.pinimg.com/236x/87/8b/1d/878b1d0f4fa96de730def7a7642d1751.jpg');
+  // background-image: url('https://i.pinimg.com/236x/b7/b5/09/b7b509c3a93678ca13928cb4087db18d.jpg');
+  padding-top: 5px;
+}
+
+.contenedor{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow: visible;
+  padding-bottom: 10px;
+}
+
+.numeros{
+  background-image: url(../../assets/fondoNumerosPPS.jpg);
+  background-size: cover;
+  background-color:  #6b6b6b;
+    background-blend-mode: overlay;
+    opacity: 1;
+}
+
+.colores{
+  background-color:  #6b6b6b;
+    background-blend-mode: overlay;
+    opacity: 1;
+  background-image: url(https://i.pinimg.com/originals/4a/a0/38/4aa03837e9beee7805ddcc4f4225c6ab.jpg);
+  background-size: cover;
+}
+
+.animales{
+  background-color:  #4e4e4e;
+  background-blend-mode: overlay;
+  opacity: 2;
+  // background-image: url(https://i.pinimg.com/736x/60/55/a9/6055a9b825bb8505122a3202977ca50a.jpg);
+  // background-image: url(https://img.freepik.com/vector-premium/fondo-pantalla-huella-perro_591410-63.jpg);
+  // background-image: url(https://img.freepik.com/vector-gratis/diseno-patron-pow-colorido-lindo-gatito_1017-14710.jpg?w=2000);
+  // background-image: url(https://i.pinimg.com/750x/fd/39/d3/fd39d3dd24587c2eb1db720f27b9a1bf.jpg);
+  background-image: url(https://i.pinimg.com/564x/5b/5e/d2/5b5ed2450c3a9725293200ef290c3b42.jpg);
+
+  background-size: cover;
+}
+
+
+.columna{
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.columnaPrimera{
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+
+
+.contenedorUltimo{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  // background-image: url('https://i.pinimg.com/236x/87/8b/1d/878b1d0f4fa96de730def7a7642d1751.jpg');
+  // background-image: url('https://i.pinimg.com/236x/b7/b5/09/b7b509c3a93678ca13928cb4087db18d.jpg');
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.contenedorPrimero{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  // background-image: url('https://i.pinimg.com/236x/87/8b/1d/878b1d0f4fa96de730def7a7642d1751.jpg');
+  // background-image: url('https://i.pinimg.com/236x/b7/b5/09/b7b509c3a93678ca13928cb4087db18d.jpg');
+  padding-top: 10px;
+}
+.opcionesTablaDer{
+  height: 99%;
+  width: 99%;
+
+  border-radius: 10px;
+  border: 2px solid black;
+  border-color: black;  
+  margin-left: 6.5px;
+  display: inline-block;
+  background: transparent;
+}
+.opcionesTablaIzq{
+  height: 99%;
+  width: 99%;
+  border: 2px solid black;
+  border-color: black;  margin-left: 5px;
+  border-radius: 10px;
+  margin-left: 6.5px;
+  margin-right: 6.5px;
+  display: inline-block;
+  background: transparent;
+}
+
+
+ion-title{
+  background:#fafda1;
+}
+
+// ion-header{
+//   background-color: aqua;
+// }

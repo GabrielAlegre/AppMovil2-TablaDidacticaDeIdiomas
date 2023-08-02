@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.card-center{
+    width:90%; // adjust width on your ion-card suitable on your screen
+    display:block;
+    margin: 35px auto;
+}
+
+ion-icon{
+    padding-right: 7px;
+    font-size: 22px;
+    color: #000000;
+    transform:translateY(23%);
+}
+
+ion-label{
+    font-size: 20px;
+}
+
+#logoLogIn{
+
+    font-size: 24px;
+    color: #ffffff;
+    transform:translateY(1%);
+}
+
+ion-button{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    
+}
+
+.mensajeError{
+    padding: 10px;
+    border-radius: 7px;
+}
+
+ion-content {
+    --background: url('../../assets/splash.png') no-repeat center center fixed;
+    background-size: cover;
+}
+ion-toolbar {
+    --background: #94ced8;
+}
+
+ion-title{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 15px;
+    color: #000000;
+}
+
+ion-card{
+    background : transparent;
+    border-radius: 17px;
+}
+
+.item-background-color{
+    --ion-item-background:transparent;
+}
+
+#imgLogin{
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 145px;
+    padding-top: 10px;
+}
+
+  ion-card-title{
+    text-align: center;
+    color: #000000;
+  }
+
+  .eyeicon{
+    position: absolute;
+    display: block;
+    bottom: .5rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  img{
+    width: 100px;
+    padding-top: 40px;
+    // padding-bottom: 20px;
+  }
+
+  #usuarios{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #usuariosNombre{
+    display: flex;
+    justify-content:space-between;
+    // padding-left: 10px;
+  }
+
+  p{
+    color: #000000;
+    // margin-left: 8px;
+    margin-top: 10px;
+    font-size: 13px
+}
+
+#parrafoInvitado{
+    padding-left:27px;
+}
+
+#parrafoAdmin{
+     padding-right: 4.5px;
+}
+
+#parrafoDesarrollador{
+    padding-left: 30px;
+}
+
+.inputCorreo{
+    margin-bottom: 30px;
+}
+
+ion-loading.custom-loading {
+    --background: #e3edff;
+    --spinner-color: #1c6dff;
+  
+    color: #1c6dff;
+  }

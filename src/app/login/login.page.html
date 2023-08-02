@@ -1,0 +1,122 @@
+<ion-content force-overscroll="false">
+  <div class="backgroundLayer">
+    <ion-header class="ion-text-center">
+      <ion-toolbars>
+        <ion-title>App - Tabla didáctica</ion-title>
+      </ion-toolbars>
+    </ion-header>
+  </div>
+  <ion-card class="card-center">  
+    <img id="imgLogin" alt="Silhouette of mountains" src="../../assets/cliente.png" />
+    <ion-card-header>
+      <ion-card-title>Iniciar sesión</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form (ngSubmit)="login()">
+        <ion-item class="item-background-color inputCorreo" >
+          <ion-label class="text-dark" position="floating"><ion-icon name="mail" item-start class="text-primary"></ion-icon>Correo</ion-label>
+          <ion-input class="text-dark" [formControl]="email" name="email" placeholder="Ingrese Correo" [(ngModel)]="emailBind"></ion-input>
+        </ion-item>
+        <div class="alert alert-danger mensajeError mt-2 bi bi-x-circle" [hidden]="email.valid || (email.pristine && email.untouched)">
+          <span *ngIf="email.errors?.['email']">
+            El email debe ser válido
+          </span>
+          
+          <span *ngIf="email.errors?.['required']">
+            El campo email es obligatorio, ingrese uno!
+          </span>
+
+        </div> 
+        <ion-item class="item-background-color" style="position: relative;">
+          <ion-label class="text-dark" position="floating"><ion-icon name="key" item-start class="text-primary"></ion-icon>Contraseña</ion-label>
+          <ion-input class="text-dark" [formControl]="password" name="password" [type]="changetype?'password':'text'" placeholder="Ingrese Contraseña" [(ngModel)]="contraBind">
+          </ion-input>
+          <span class="eyeicon" (click)="verPass()"><ion-icon name={{icon}} item-start class="text-primary"></ion-icon></span>
+        </ion-item>
+
+   
+        <div class="alert alert-danger mensajeError mt-2 bi bi-x-circle" [hidden]="password.valid || (password.pristine && password.untouched)">
+          <span *ngIf="password.errors?.['minlength']">
+            La clave debe tener mínimo 6 caracteres
+          </span>
+          
+          <span *ngIf="password.errors?.['required']">
+            La contraseña es obligatoria, ingrese uno!
+          </span>
+      </div>
+
+      <div id="usuarios">
+        <img (click)="loginAutomatico('usuario@usuario.com','333333')" src="../../assets/usuarios/mujeres.png" alt="">
+        <img (click)="loginAutomatico('invitado@invitado.com','222222')" src="../../assets/usuarios/estudiante.png" alt="">
+        <img (click)="loginAutomatico('admin@admin.com','111111')" src="../../assets/usuarios/programador.png" alt="">
+      </div>
+      <div id="usuariosNombre">
+        <p id="parrafoDesarrollador">Usuario</p>
+        <p id="parrafoInvitado">Invitado</p>
+        <p id="parrafoAdmin">Administrador</p>
+      </div>
+        <ion-button id="open-loading" expand="block" type="submit"><ion-icon id="logoLogIn" name="log-in"></ion-icon>Ingresar</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  </ion-content>
+<ion-loading class="custom-loading" trigger="open-loading" message="Cargando...." [duration]="1500"></ion-loading>
+
+
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Inicio de sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon slot="start" name="moon"></ion-icon>
+      <ion-label> Cambiar </ion-label>
+      <ion-toggle slot="end" (ionChange)='cambio($event)'></ion-toggle>
+    </ion-item>
+  </ion-list>
+  
+
+  <ion-card class="card-center">
+    <ion-card-header>
+      <ion-card-title>Iniciar sesión</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form (ngSubmit)="login()">
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input [formControl]="email" name="email" ngModel placeholder="Ingrese Email"></ion-input>
+        </ion-item>
+        <div class="alert alert-danger mensajeError mt-2 bi bi-x-circle" [hidden]="email.valid || (email.pristine && email.untouched)">
+          <span *ngIf="email.errors?.['email']">
+            El email debe ser valido
+          </span>
+          
+          <span *ngIf="email.errors?.['required']">
+            El campo email es obligatorio, ingrese uno!
+          </span>
+
+        </div> 
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input [formControl]="password" name="password" type="password" placeholder="Ingrese Contraseña" ngModel></ion-input>
+        </ion-item>
+
+   
+        <div class="alert alert-danger mensajeError mt-2 bi bi-x-circle" [hidden]="password.valid || (password.pristine && password.untouched)">
+          <span *ngIf="password.errors?.['minlength']">
+            La contraseña debe tener como minimo 6 caracteres
+          </span>
+          
+          <span *ngIf="password.errors?.['required']">
+            La contraseña es obligatoria, ingrese uno!
+          </span>
+      </div>
+        <ion-button expand="block" type="submit">Ingresar</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content> -->
